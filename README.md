@@ -16,7 +16,7 @@ puts (fib 10)   #=> 55
 
 とはいえ、最初は `42` をコンパイルするところからスタートする。
 
-# 環境構築手順
+## 環境構築手順
 
 手元が macOS(x86-64) なので docker を利用して linux 環境をつくる
 
@@ -25,13 +25,15 @@ $ docker build -t mmudc .
 $ docker run --name mmudc -v `pwd`:/mmudc -itd mmudc sh
 ```
 
-# テスト手順
+コンパイラーの開発は実機で行い、バイナリーの実行とテストは docker上で行う。
+
+## テスト手順
 
 ```
 ./test.sh
 ```
 
-# 進め方
+## 進め方
 
 https://www.sigbus.info/compilerbook
 を参考にする
